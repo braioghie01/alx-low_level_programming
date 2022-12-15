@@ -23,7 +23,7 @@ void print_times_table(int n)
 			product = (row * column);
 
 			if (column == 0)
-				_putchar('0' + produt);
+				_putchar('0' + product);
 			else
 			{
 				_putchar(',');
@@ -32,7 +32,7 @@ void print_times_table(int n)
 				{
 					_putchar(' ');
 					_putchar(' ');
-					_putchar('0' + prodct);
+					_putchar('0' + product);
 				}
 				else if (product > 9 && product < 100)
 				{
