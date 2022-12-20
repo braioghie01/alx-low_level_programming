@@ -1,21 +1,25 @@
-#include"main.h"
-
+#include <stdio.h>
+#include "main.h"
 /**
- * puts2 - prints every character of a string
- *
- * @str: string parameter input
- *
- * Return: Noting
-*/
+ * rev_string - This function prints a string in reverse order
+ * @s: pointer parameter
+ */
 
-void puts2(char *str)
+void rev_string(char *s)
 {
-	int i;
+	int len, i, half;
+	char temp;
 
-	for (i = 0; str[i] != '\0'; ++i)
+	for (len = 0; s[len] != '\0'; len++)
+	;
+	i = 0;
+	half = len / 2;
+
+	while (half--)
 	{
-		if (i % 2 == 0)
-			_putchar(str[i]);
+		temp = s[len - i - 1];
+		s[len - i - 1] = s[i];
+		s[i] = temp;
+		i++;
 	}
-	_putchar('\n');
 }
